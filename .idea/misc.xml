@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/drawable-hdpi/estilo_caja_texto.xml" value="0.2605" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/drawable/estilo_boton_accent_circular.xml" value="0.2605" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/drawable/estilo_boton_verde_circular.xml" value="0.2605" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/drawable/ic_asistencia_black.xml" value="0.325" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/drawable/ic_menu_qr_white.xml" value="0.3065" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/activity_lectura_portabin_maquinaria.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/activity_pantalla_asignacion_tickets.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/activity_pantalla_asistencia_personal.xml" value="0.3619791666666667" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/activity_pantalla_cosecha.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/activity_pantalla_grupos_lista.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/activity_pantalla_lectura_tickets_02.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/activity_pantalla_login.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/activity_pantalla_maquinaria.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/activity_pantalla_principal.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/activity_pantalla_salida_asistencia.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/activity_pantalla_tareo_asistencia.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/activity_pantalla_tareos.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/activity_reconocimiento_asistencia_personal.xml" value="0.33" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/activity_reconocimiento_camara.xml" value="0.3619791666666667" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/activity_reconocimiento_test.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/activity_reconocimiento_test_asistencia.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/activity_splash.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/item_dialog_impresion_bin.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/item_dialog_qr.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/item_dialog_row.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/item_lista_salida_asistencia.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/item_tareo.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/layout/item_tareo_horas.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/menu/menu_asistencia_test.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android ACP/Campo/Palta/TareoPalta/app/src/main/res/menu/menu_reconocimiento.xml" value="0.3776041666666667" />
+        <entry key="..\:/ProjetsAndroid/ACP/TareoPalta/app/src/main/res/layout/activity_pantalla_lectura_tickets.xml" value="0.1" />
+        <entry key="..\:/ProjetsAndroid/ACP/TareoPalta/app/src/main/res/layout/activity_pantalla_lectura_tickets_02.xml" value="0.27447916666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

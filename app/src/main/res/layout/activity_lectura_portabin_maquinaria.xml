@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LecturaPortabinMaquinaria">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<ImageView
+            android:scaleType="centerCrop"
+            android:alpha="0.5"
+            android:src="@drawable/background_2021"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>-->
+
+        <LinearLayout
+            android:layout_above="@+id/rl_pie"
+            android:id="@+id/ly_lectura"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ly_codigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textSize="12sp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="1)PORTABIN / 2)TRAZABILIDAD / 3)BIN"
+                    android:textColor="#000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <EditText
+                        android:textSize="12sp"
+                        android:background="@drawable/estilo_caja_texto"
+                        android:id="@+id/edt_codigo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:maxLength="17"
+                        android:inputType="text" />
+
+                    <ImageButton
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/estilo_boton_black_circular"
+                        android:src="@drawable/ic_eliminar_white"
+                        android:layout_weight="0"
+                        android:id="@+id/ibtnLimpiar"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+                <!--<LinearLayout
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:background="@drawable/estilo_cuadrado_001"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:text="1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"/>
+
+                        <LinearLayout
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:drawableLeft="@drawable/montacarga"
+                                android:drawablePadding="10dp"
+                                android:textStyle="bold"
+                                android:textColor="#2d2d2d"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="PORTABIN" />
+
+                            <TextView
+                                android:textColor="#2d2d2d"
+                                android:id="@+id/txt_portabin"
+                                android:textSize="22sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="#####" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:paddingRight="5dp"
+                        android:orientation="horizontal"
+                        android:layout_weight="1.3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:background="@drawable/estilo_cuadrado_001"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:text="2"
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"/>
+
+                            <LinearLayout
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textStyle="bold"
+                                    android:textColor="#2d2d2d"
+                                    android:gravity="center"
+                                    android:textSize="16sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="TRAZABILIDAD" />
+
+                                <TextView
+                                    android:textColor="#2d2d2d"
+                                    android:id="@+id/txt_trazabilidad"
+                                    android:textSize="22sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="###########" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:background="@drawable/estilo_cuadrado_001"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:textColor="#000"
+                                android:text="3"
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"/>
+
+                            <LinearLayout
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textStyle="bold"
+                                    android:textColor="#2d2d2d"
+                                    android:gravity="center"
+                                    android:textSize="16sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="CÓD. BIN" />
+
+                                <TextView
+                                    android:textColor="#2d2d2d"
+                                    android:id="@+id/txt_bin"
+                                    android:textSize="22sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="########" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>-->
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/montacarga"
+                    android:drawablePadding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textColor="#2d2d2d"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1) PORTABIN" />
+
+                <TextView
+                    android:textColor="#2d2d2d"
+                    android:gravity="center"
+                    android:id="@+id/txt_portabin"
+                    android:textSize="22sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="#####" />
+
+                <LinearLayout
+                    android:paddingTop="8dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:textColor="#2d2d2d"
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2) TRAZABILIDAD" />
+
+                        <TextView
+                            android:textColor="#2d2d2d"
+                            android:gravity="center"
+                            android:id="@+id/txt_trazabilidad"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="##########" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:textColor="#2d2d2d"
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="3) CÓD. BIN" />
+
+                        <TextView
+                            android:textColor="#2d2d2d"
+                            android:gravity="center"
+                            android:id="@+id/txt_bin"
+                            android:textSize="20sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="########" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_above="@+id/rl_pie"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:background="#802d2d2d"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="#cccccc"
+                        android:layout_weight="1.5"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:text="PORTABIN"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="#cccccc"
+                        android:layout_weight="1"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:text="Bines"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/lv_detalle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:visibility="visible"
+            android:background="#202d2d2d"
+            android:id="@+id/rl_pie"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:background="#000"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_weight="1.5"
+                    android:text="TOTAL:"
+                    android:gravity="right|center_vertical"
+                    android:textColor="#000"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:background="#202d2d2d"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:id="@+id/item_total_detalle"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:padding="10dp"
+                        android:text="0000"
+                        android:textColor="#000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

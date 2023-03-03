@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="-4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/ly_grupo"
+            android:background="?android:attr/selectableItemBackground"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ly_cabecera"
+                android:background="@color/colorNegroBajo"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:padding="10dp"
+                    android:id="@+id/tv_id_grupo"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="12sp"
+                    android:textColor="#fff"
+                    android:text="001_2020-04-08_01:04:00"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <ImageButton
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:elevation="2dp"
+                    android:background="@drawable/estilo_boton_rojo_circular"
+                    android:src="@drawable/ic_copiar_blanco"
+                    android:id="@+id/btn_copiar_grupo"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content" />
+
+                <ImageButton
+                    android:visibility="gone"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:elevation="2dp"
+                    android:background="@drawable/estilo_boton_rojo_circular"
+                    android:src="@drawable/ic_cerrar_blanco"
+                    android:id="@+id/btn_eliminar_grupo"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:id="@+id/rl_editar"
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_editar_blanco"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_personas_negro" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:id="@+id/tv_nombre_grupo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:text="GRUPO 001"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_fecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="8dp"
+                    android:text="2017-10-21"
+                    android:textColor="#80000000"
+                    android:textSize="13sp"
+                    android:textStyle="italic|bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

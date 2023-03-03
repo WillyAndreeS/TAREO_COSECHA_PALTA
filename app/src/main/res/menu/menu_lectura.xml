@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:visible="false"
+        android:id="@+id/action_transferir"
+        android:orderInCategory="100"
+        android:icon="@drawable/menu_subir_blanco"
+        android:title="Transferir"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_reporte"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_lista_negro"
+        android:title="Total por Consumidor"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:visible="false"
+        android:id="@+id/action_jabero"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_buscar_blanco"
+        android:title="Total por Consumidor"
+        app:showAsAction="ifRoom" />
+</menu>

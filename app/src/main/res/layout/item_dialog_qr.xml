@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:background="@color/colorAccent"
+        android:padding="16dp"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="QR de descarga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_qr"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginLeft="0px"
+            android:layout_marginRight="0px"
+            android:layout_marginBottom="0px"
+            android:adjustViewBounds="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:textColor="#0000ff"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingBottom="16dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="@string/enlace_descarga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:textSize="12sp"
+        android:textColor="#000"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="16dp"
+        android:text="@string/nota_descarga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

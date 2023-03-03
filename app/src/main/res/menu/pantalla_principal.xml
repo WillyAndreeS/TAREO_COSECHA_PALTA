@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_ver_horas"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_menu_horas"
+        android:title="Ver Horas"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_salida"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_menu_salir"
+        android:title="Salida"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_info"
+        android:visible="false"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_info_blanco"
+        android:title="Información"
+        app:showAsAction="never" />
+
+    <item
+        android:visible="false"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_tutorial"
+        android:title="Tutorial"
+        app:showAsAction="never" />
+
+    <item
+        android:visible="false"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_map"
+        android:title="Mapa"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_subir"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_subir_data"
+        android:title="Subir Copia de BD"
+        app:showAsAction="never" />
+</menu>

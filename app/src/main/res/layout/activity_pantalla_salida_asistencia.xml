@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PantallaSalidaAsistencia">
+
+    <!--<ImageView
+        android:scaleType="centerCrop"
+        android:alpha="0.5"
+        android:src="@drawable/background_2021"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+
+    <RelativeLayout
+        android:id="@+id/rl_salida_asistencia"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_above="@+id/parte_baja"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ly_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:inputType="number"
+                        android:layout_weight="1"
+                        android:digits="0123456789"
+                        android:drawableLeft="@drawable/ic_dni_negro"
+                        android:drawablePadding="8dp"
+                        android:id="@+id/edt_dni"
+                        android:hint="DNI Trabajador"
+                        android:textColor="#000"
+                        android:maxLength="8"
+                        android:textSize="18sp"
+                        android:background="@drawable/estilo_caja_texto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <ImageButton
+                        android:elevation="2dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/estilo_boton_verde_circular"
+                        android:src="@drawable/ic_camara_blanco"
+                        android:layout_weight="0"
+                        android:id="@+id/ibtnLector"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:visibility="visible"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:background="@color/colorPrimary"
+                            android:textColor="#fff"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:text="TRABAJADOR"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:visibility="visible"
+                            android:id="@+id/item_cab_rend"
+                            android:layout_marginLeft="1dp"
+                            android:background="#2d2d2d"
+                            android:textColor="#fff"
+                            android:padding="5dp"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:text="HORA"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ListView
+                android:layout_below="@+id/ly_items"
+                android:layout_above="@+id/btn_salir"
+                android:id="@+id/lv_trabajadores_salida"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/parte_baja"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="2dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:visibility="visible"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:background="#202d2d2d"
+                    android:textColor="#000"
+                    android:padding="5dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="right|center"
+                    android:text="TOTAL: "
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/txt_conteo"
+                    android:visibility="visible"
+                    android:background="#502d2d2d"
+                    android:textColor="#000"
+                    android:padding="5dp"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_lectura"
+    tools:context=".PantallaLecturaTickets">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UnknownId">
+
+        <TextView
+            android:visibility="visible"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:text="(1)CÓD. BIN TRAZ. / (2)CÓD. COSECHADOR"
+            android:textColor="#000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:visibility="visible"
+                android:drawableLeft="@drawable/codebar"
+                android:drawablePadding="8dp"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:background="@drawable/estilo_caja_texto"
+                android:id="@+id/edt_consumidor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"/>
+
+            <ImageButton
+                android:visibility="gone"
+                android:id="@+id/ibtn_block"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0"
+                android:background="@drawable/estilo_boton_negro_circular"
+                android:src="@drawable/ic_bloquear_negro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/estilo_boton_verde_circular"
+                android:src="@drawable/ic_camara_blanco"
+                android:layout_weight="0"
+                android:id="@+id/ibtnLector"
+                android:layout_width="60dp"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:visibility="visible"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"
+            android:text="DATOS LECTURA BIN"
+            android:textColor="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="#2d2d2d"
+                android:gravity="right"
+                android:textSize="24sp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="CONSUMIDOR:" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginLeft="8dp"
+                android:gravity="left"
+                android:id="@+id/txtConsumidor"
+                android:textSize="26sp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="######" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="#2d2d2d"
+                android:gravity="right"
+                android:textSize="24sp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="VÁLVULA:" />
+
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="left"
+                android:id="@+id/txtValvula"
+                android:textSize="26sp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="###" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="#2d2d2d"
+                android:gravity="right"
+                android:textSize="24sp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="VARIEDAD:" />
+
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="left"
+                android:id="@+id/txtVariedad"
+                android:textSize="26sp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="#######" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:visibility="gone"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:text="BINERO DNI | TICKET"
+            android:textColor="#000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:visibility="gone"
+            android:drawableLeft="@drawable/ic_menu_asignar"
+            android:drawablePadding="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/estilo_caja_texto"
+            android:id="@+id/edt_codigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <RelativeLayout
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:text="CÓDIGO COSECHADOR"
+            android:textColor="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:visibility="gone"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:id="@+id/txt_ticket"
+                android:textSize="26sp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="#####" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:background="#202d2d2d"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#303F9F"
+                    android:gravity="right"
+                    android:textSize="35sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GRUPO:" />
+
+                <TextView
+                    android:id="@+id/idgrupo"
+                    android:layout_marginLeft="16dp"
+                    android:textStyle="bold"
+                    android:textColor="#2d2d2d"
+                    android:gravity="right"
+                    android:textSize="35sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#####"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:background="@color/colorPrimary"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="right"
+                    android:textSize="28sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL GRUPO:" />
+
+                <TextView
+                    android:id="@+id/contadorJabasGrupo"
+                    android:layout_marginLeft="16dp"
+                    android:textStyle="bold"
+                    android:textColor="#2d2d2d"
+                    android:gravity="right"
+                    android:textSize="32sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 B."/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/parte_baja"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="2dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:visibility="visible"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:background="#202d2d2d"
+                android:textColor="#000"
+                android:padding="5dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:gravity="right|center"
+                android:text="TOTAL GENERAL: "
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="0"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/contadorJabasLeidas"
+                android:visibility="visible"
+                android:layout_marginLeft="1dp"
+                android:background="#502d2d2d"
+                android:textColor="#000"
+                android:padding="5dp"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:text="0 B."
+                android:textStyle="bold"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

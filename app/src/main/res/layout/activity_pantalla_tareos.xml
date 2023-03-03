@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".PantallaTareos">
+
+    <!--<ImageView
+        android:scaleType="centerCrop"
+        android:alpha="0.5"
+        android:src="@drawable/background_2021"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:visibility="gone"
+                android:textSize="12sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:text="Código"
+                android:textColor="#000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="gone"
+                android:drawableLeft="@drawable/ic_id_dispositivo"
+                android:drawablePadding="8dp"
+                android:id="@+id/edt_codigo"
+                android:hint="Código"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/estilo_caja_texto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="gone"
+                android:textSize="12sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:text="Fecha"
+                android:textColor="#000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:visibility="gone"
+                android:drawableLeft="@drawable/ic_calendario"
+                android:drawablePadding="8dp"
+                android:id="@+id/edt_fecha"
+                android:textColor="#000"
+                android:hint="Selecciona Fecha"
+                android:textSize="18sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/estilo_caja_texto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:text="Actividad"
+                android:textColor="#000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:drawableLeft="@drawable/ic_actividad"
+                android:drawablePadding="8dp"
+                android:id="@+id/edt_actividad"
+                android:textColor="#000"
+                android:hint="Selecciona Actividad"
+                android:textSize="18sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/estilo_caja_texto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txt_titulo_labor"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:text="Labor"
+                android:textColor="#000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:drawableLeft="@drawable/ic_labor"
+                android:drawablePadding="8dp"
+                android:id="@+id/edt_labor"
+                android:textColor="#000"
+                android:hint="Selecciona Labor"
+                android:textSize="18sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/estilo_caja_texto"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content" />
+
+            <!--<TextView
+                android:id="@+id/txt_titulo_sublabor"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:text="SubLabor"
+                android:textColor="#000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />-->
+
+            <TextView
+                android:drawableLeft="@drawable/ic_labor"
+                android:drawablePadding="8dp"
+                android:id="@+id/edt_sublabor"
+                android:textColor="#000"
+                android:hint="Selecciona Labor"
+                android:textSize="18sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/estilo_caja_texto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="12sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:text="Consumidor"
+                android:textColor="#000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:drawableLeft="@drawable/ic_consumidor_negro"
+                android:drawableTint="@color/colorNegroBajo"
+                android:drawablePadding="8dp"
+                android:id="@+id/edt_consumidor"
+                android:textColor="#000"
+                android:hint="Selecciona Consumidor"
+                android:textSize="18sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/estilo_caja_texto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--<TextView
+                android:textSize="12sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:text="Valvula"
+                android:textColor="#000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:drawableLeft="@drawable/ic_valvula"
+                android:drawableTint="@color/colorNegroBajo"
+                android:drawablePadding="8dp"
+                android:id="@+id/edt_valvula"
+                android:textColor="#000"
+                android:hint="Selecciona Valvula"
+                android:textSize="18sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/estilo_caja_texto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />-->
+
+            <TextView
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:text="Turno"
+                android:textColor="#000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <RadioButton
+                    android:id="@+id/rbDiurno"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="DIURNO" />
+
+                <RadioButton
+                    android:id="@+id/rbNocturno"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="NOCTURNO" />
+            </RadioGroup>
+
+            <TextView
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:text="Horas"
+                android:textColor="#000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+            <EditText
+                android:drawableLeft="@drawable/ic_reloj_black"
+                android:drawablePadding="8dp"
+                android:id="@+id/edt_horas"
+                android:textColor="#000"
+                android:hint="Horas"
+                android:maxLength="4"
+                android:inputType="numberDecimal"
+                android:textSize="18sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/estilo_caja_texto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <!--<TextView
+                android:id="@+id/txt_titulo_observacion"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:text="Observación"
+                android:textColor="#000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:digits="-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                android:drawableLeft="@drawable/ic_observacion"
+                android:drawablePadding="8dp"
+                android:id="@+id/edt_observacion"
+                android:textColor="#000"
+                android:hint="Observación (Opcional)"
+                android:textSize="18sp"
+                android:inputType="text"
+
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/estilo_caja_texto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />-->
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_grabar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/estilo_boton_verde_circular"
+                    android:elevation="16dp"
+                    android:text="GRABAR"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/btn_salir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/estilo_boton_black_circular"
+                    android:elevation="16dp"
+                    android:text="SALIR"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragAgregarUsuario">
+
+    <!--<ImageView
+        android:scaleType="centerCrop"
+        android:alpha="0.5"
+        android:src="@drawable/background_2021"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_margin="16dp"
+            android:inputType="number"
+            android:digits="0123456789"
+            android:drawableLeft="@drawable/ic_codigo_negro"
+            android:drawablePadding="8dp"
+            android:id="@+id/edt_dni"
+            android:hint="DNI Trabajador"
+            android:textColor="#000"
+            android:maxLength="8"
+            android:text=""
+            android:textSize="18sp"
+            android:background="@drawable/estilo_caja_texto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="5dp"
+            android:background="#2d2d2d"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"></RelativeLayout>
+
+        <TextView
+            android:textSize="12sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Datos Trabajador"
+            android:textColor="#000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:drawableLeft="@drawable/ic_usuario_black"
+            android:drawablePadding="8dp"
+            android:id="@+id/txt_Dni_Nombre"
+            android:hint="Nombre Trabajador"
+            android:text=""
+            android:padding="8dp"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textSize="12sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:text="Lectura de Etiquetas"
+            android:textColor="#000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:paddingBottom="10dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/rb_si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="SI" />
+
+                <RadioButton
+                    android:layout_gravity="center"
+                    android:checked="true"
+                    android:id="@+id/rb_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="NO" />
+            </RadioGroup>
+
+            <ImageButton
+                android:id="@+id/ibtn_agregar"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/estilo_boton_verde_circular"
+                android:layout_weight="0"
+                android:src="@drawable/ic_person_add_white"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+        <!--<Button
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/btn_salir"
+            android:elevation="16dp"
+            android:background="@drawable/estilo_boton_black_circular"
+            android:textSize="15sp"
+            android:textColor="#fff"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Agregar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />-->
+
+        <RelativeLayout
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="#2d2d2d"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"></RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_cabeceras"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:visibility="visible"
+                    android:id="@+id/item_titulo"
+                    android:background="@color/colorPrimary"
+                    android:textColor="#fff"
+                    android:padding="5dp"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="USUARIO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:visibility="visible"
+                    android:id="@+id/item_cab_opcion"
+                    android:background="#2d2d2d"
+                    android:textColor="#fff"
+                    android:padding="5dp"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="LEE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeActualizarLista"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/lv_usuarios"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

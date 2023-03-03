@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:maxLength="4"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:drawablePadding="8dp"
+        android:id="@+id/txt_dialog_cant"
+        android:hint="Ejm: 7.5, 7, 8"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/estilo_caja_texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

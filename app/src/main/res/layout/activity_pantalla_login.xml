@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PantallaLogin">
+
+    <ImageView
+        android:id="@+id/backgroundLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:background="#202d2d2d"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </RelativeLayout>
+
+    <LinearLayout
+        android:background="#30000000"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginTop="-55dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:src="@drawable/logo_actionbar_nuevo"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            app:cardBackgroundColor="#992d2d2d"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardElevation="15dp"
+            app:cardCornerRadius="25dp"
+            app:cardUseCompatPadding="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:background="#802d2d2d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:text="Iniciar Sesión"
+                        android:textColor="#fff"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Palta ACP"
+                        android:textColor="#fff"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:text="DNI"
+                        android:textColor="#fff"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/edt_dni_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/estilo_caja_texto"
+                        android:digits="0123456789"
+                        android:drawableLeft="@drawable/ic_usuario_black"
+                        android:drawablePadding="8dp"
+                        android:hint="Ingrese Dni"
+                        android:inputType="number"
+                        android:maxLength="8"
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_aceptar_login"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:background="@drawable/estilo_boton_verde_circular"
+                            android:elevation="16dp"
+                            android:text="INGRESAR"
+                            android:textColor="#fff"
+                            android:textSize="15sp" />
+
+                        <ImageButton
+                            android:id="@+id/imb_reconocimiento"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="0.2"
+                            android:background="@drawable/estilo_boton_black_circular"
+                            android:src="@drawable/face_recognition"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_salir_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="30dp"
+                        android:background="@drawable/estilo_boton_black_circular"
+                        android:elevation="16dp"
+                        android:text="SALIR"
+                        android:textColor="#fff"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"
+                        android:text="@string/version_y_fecha"
+                        android:textColor="#fff"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_sinronizar_login"
+                    app:fabSize="mini"
+                    android:src="@drawable/ic_menu_sincronizar"
+                    android:layout_margin="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+
+    <!--<io.github.kobakei.materialfabspeeddial.FabSpeedDial
+        android:id="@+id/fab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:fab_extraMargin="-8dp"
+        app:fab_fabBackgroundColor="@color/colorAccent"
+        app:fab_fabDrawableTint="#FFF"
+        app:fab_fabRippleColor="#FFF"
+        app:fab_miniFabBackgroundColor="@color/fab_mini"
+        app:fab_miniFabDrawableTint="@android:color/white"
+        app:fab_miniFabTextBackground="@drawable/label_material_fab"
+        app:fab_miniFabTextColor="@color/fab_mini_texto"
+        app:fab_touchGuardColor="#40000000"
+        app:fab_useRippleOnPreLollipop="false"
+        app:fab_useTouchGuard="true" />-->
+
+    <io.github.kobakei.materialfabspeeddial.FabSpeedDial
+        android:id="@+id/fab"
+        app:fab_useRippleOnPreLollipop="false"
+        app:fab_useTouchGuard="true"
+        app:fab_touchGuardColor="#60000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:fab_miniFabTextBackground="@drawable/label_material_fab"
+        app:fab_miniFabBackgroundColor="@color/fab_mini"
+        app:fab_miniFabDrawableTint="@android:color/white"
+
+        app:fab_miniFabTextColor="@color/fab_mini_texto"
+
+        app:fab_fabBackgroundColor="@color/colorPrimary"
+        app:fab_fabDrawableTint="#FFF"
+        app:fab_fabRippleColor="#FFF"/>
+
+</RelativeLayout>

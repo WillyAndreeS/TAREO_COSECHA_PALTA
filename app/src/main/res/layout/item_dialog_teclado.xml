@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:digits="0123456789"
+        android:maxLength="8"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:drawablePadding="8dp"
+        android:gravity="right"
+        android:id="@+id/txt_dialog_cant"
+        android:enabled="false"
+        android:hint="Digite Cantidad"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:background="@drawable/estilo_caja_texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <!--<com.fxn769.Numpad
+        android:visibility="gone"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="0dp"
+        app:numpad_background_resource ="@drawable/numpad_background"
+        app:numpad_grid_background_color="#4CAF50"
+        app:numpad_grid_line_thickness="2dp"
+        app:numpad_grid_visible="true"
+        app:numpad_image_resource="@drawable/ic_backspace"
+        app:numpad_text_color="#000000"
+        app:numpad_text_limit="4"
+        app:numpad_text_size="16dp"/>-->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/one"
+                android:clickable="true"
+                android:background="@drawable/estilo_boton_teclado_cuadrado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="#000"
+                android:textSize="35dp" />
+
+            <TextView
+                android:id="@+id/line1"
+                android:background="#2d2d2d"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/four"
+                android:clickable="true"
+                android:background="@drawable/estilo_boton_teclado_cuadrado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="#000"
+                android:textSize="35dp" />
+
+            <TextView
+                android:id="@+id/line2"
+                android:background="#2d2d2d"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/seven"
+                android:clickable="true"
+                android:background="@drawable/estilo_boton_teclado_cuadrado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="#000"
+                android:textSize="35dp" />
+
+            <TextView
+                android:id="@+id/line3"
+                android:background="#2d2d2d"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/point"
+                android:clickable="true"
+                android:background="@drawable/estilo_boton_teclado_cuadrado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="."
+                android:textColor="#000"
+                android:textSize="35dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/line4"
+            android:layout_width="2dp"
+            android:background="#2d2d2d"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/two"
+                android:clickable="true"
+                android:background="@drawable/estilo_boton_teclado_cuadrado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="#000"
+                android:textSize="35dp" />
+
+            <TextView
+                android:id="@+id/line5"
+                android:background="#2d2d2d"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/five"
+                android:clickable="true"
+                android:background="@drawable/estilo_boton_teclado_cuadrado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="#000"
+                android:textSize="35dp" />
+
+            <TextView
+                android:id="@+id/line6"
+                android:background="#2d2d2d"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/eight"
+                android:clickable="true"
+                android:background="@drawable/estilo_boton_teclado_cuadrado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="8"
+                android:textColor="#000"
+                android:textSize="35dp" />
+
+            <TextView
+                android:id="@+id/line7"
+                android:background="#2d2d2d"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/zero"
+                android:clickable="true"
+                android:background="@drawable/estilo_boton_teclado_cuadrado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#000"
+                android:textSize="35dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/line8"
+            android:background="#2d2d2d"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/three"
+                android:clickable="true"
+                android:background="@drawable/estilo_boton_teclado_cuadrado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="#000"
+                android:textSize="35dp" />
+
+            <TextView
+                android:id="@+id/line9"
+                android:background="#2d2d2d"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/six"
+                android:clickable="true"
+                android:background="@drawable/estilo_boton_teclado_cuadrado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="6"
+                android:textColor="#000"
+                android:textSize="35dp" />
+
+            <TextView
+                android:id="@+id/line10"
+                android:background="#2d2d2d"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/nine"
+                android:clickable="true"
+                android:background="@drawable/estilo_boton_teclado_cuadrado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="9"
+                android:textColor="#000"
+                android:textSize="35dp" />
+
+            <TextView
+                android:id="@+id/line11"
+                android:background="#2d2d2d"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="visible" />
+
+            <FrameLayout
+                android:id="@+id/delete_layout"
+                android:clickable="true"
+                android:background="@drawable/estilo_boton_teclado_cuadrado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+
+                <ImageView
+                    android:tint="#2d2d2d"
+                    android:id="@+id/delete"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_backspace" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_aceptar"
+            android:layout_width="0dp"
+            android:layout_height="45sp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/estilo_boton_verde_circular"
+            android:elevation="16dp"
+            android:text="ACEPTAR"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
+
+        <Button
+            android:id="@+id/btn_cancelar"
+            android:layout_width="0dp"
+            android:layout_height="45sp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/estilo_boton_black_circular"
+            android:elevation="16dp"
+            android:text="CANCELAR"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

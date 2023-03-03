@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:visible="false"
+        android:id="@+id/action_ver_resumen"
+        android:orderInCategory="100"
+        android:title="Actualizar"
+        android:icon="@drawable/ic_menu_rendimiento"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_ver_asistencia"
+        android:orderInCategory="100"
+        android:title="Añadir Asistencia"
+        android:icon="@drawable/ic_menu_asistencia"
+        app:showAsAction="never" />
+
+</menu>

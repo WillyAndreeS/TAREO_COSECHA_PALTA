@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ACP Palta</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <!--<string name="version_y_fecha_old">v1.04 - 23/02/2021</string>
+    <string name="version_y_fecha_old">v1.04.2 - 05/04/2021</string>
+    <string name="version_y_fecha_old">v1.04.4 - 21/04/2021</string>
+    <string name="version_y_fecha_old">v1.04.5 - 28/05/2021</string>
+    <string name="version_y_fecha_old">v1.04.6 - 25/06/2021 12:55:00</string>
+    <string name="version_y_fecha_old">v1.04.7 - 09/07/2021 12:54</string>
+    <string name="version_y_fecha_old">v1.04.8 - 08/02/2022 17:27</string>
+    <string name="version_y_fecha_old">v1.04.9 - 01/03/2022 09:04</string>
+    <string name="version_y_fecha_old">v1.05.0 - 29/03/2022 12:41</string>-->
+    <string name="version_y_fecha_old">v1.05.1 - 07/04/2022 17:17</string>
+    <string name="version_y_fecha">v1.05.2 - 19/04/2022 11:02</string>
+
+    <string name="enlace_descarga">https://web.acpagro.com/apk/palta/palta.apk</string><!--SIN HTTPS, para que sea posible la descarga-->
+    <string name="nota_descarga">NOTA: Ubícate en el campo de escritura de enlace en el navegador del dispositivo, para posteriormente realizar lectura del QR. Sólo en caso dispongas de algún PDA, o cámara con la funcionalidad lectura de QR.</string>
+</resources>

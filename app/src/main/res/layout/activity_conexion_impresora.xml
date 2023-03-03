@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConexionImpresora">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<ImageView
+            android:scaleType="centerCrop"
+            android:alpha="0.5"
+            android:src="@drawable/background_2021"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>-->
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seleccione impresora:"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupPrintType"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium" >
+
+                <RadioButton
+                    android:id="@+id/radioBixolon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="BIXOLON" />
+
+                <RadioButton
+                    android:id="@+id/radioZebra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ZEBRA" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textViewPortType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Tipo de Conexión"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupPortType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium" >
+
+                <RadioButton
+                    android:id="@+id/radioBT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Bluetooth" />
+
+                <RadioButton
+                    android:id="@+id/radioWifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wi-Fi" />
+
+                <RadioButton
+                    android:visibility="gone"
+                    android:id="@+id/radioUSB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="USB" />
+
+                <RadioButton
+                    android:visibility="gone"
+                    android:id="@+id/radioBLE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BluetoothLowEnergy" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:id="@+id/textViewModel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Modelo - Serie Bixolon: " />
+
+                <Spinner
+                    android:id="@+id/spinnerModelList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                </Spinner>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewBluetoothList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Lista Bluetooth"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <ListView
+                android:id="@+id/listViewPairedDevices"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:background="@drawable/border01"/>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:id="@+id/textViewIPAddr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="IP Address : " />
+
+                <EditText
+                    android:id="@+id/editTextIPAddr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:digits="1234567890."
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />
+            </LinearLayout>
+
+            <CheckBox
+                android:visibility="gone"
+                android:id="@+id/checkBoxAsyncMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_marginTop="5dp"
+                android:text="Async Mode" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnGuardarConfiguracion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20sp"
+                android:background="@drawable/estilo_boton_verde_circular"
+                android:text="Guardar Configuración"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/fab_guardar"
+            android:layout_margin="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_check_blanco" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

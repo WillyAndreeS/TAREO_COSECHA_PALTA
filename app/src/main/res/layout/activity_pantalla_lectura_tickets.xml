@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_lectura"
+    tools:context=".PantallaLecturaTickets">
+
+    <!--<ImageView
+        android:scaleType="centerCrop"
+        android:alpha="0.5"
+        android:src="@drawable/background_2021"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+
+    <LinearLayout
+        android:layout_above="@+id/lyAccesosPLT"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UnknownId">
+
+        <TextView
+            android:visibility="visible"
+            android:textSize="12sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:text="CONSUMIDOR"
+            android:textColor="#000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:visibility="visible"
+                android:drawableLeft="@drawable/ic_consumidor_negro"
+                android:drawablePadding="8dp"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:background="@drawable/estilo_caja_texto"
+                android:id="@+id/edt_consumidor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"/>
+
+            <ImageButton
+                android:visibility="gone"
+                android:id="@+id/ibtn_block"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0"
+                android:background="@drawable/estilo_boton_negro_circular"
+                android:src="@drawable/ic_bloquear_negro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtConsumidor"
+            android:textStyle="bold"
+            android:textColor="#006682"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Consumidor: " />
+
+        <TextView
+            android:id="@+id/txtValvula"
+            android:textStyle="bold"
+            android:textColor="#006682"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Valvula: " />
+
+        <TextView
+            android:id="@+id/txtVariedad"
+            android:textStyle="bold"
+            android:textColor="#006682"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Variedad: " />
+
+        <TextView
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:text="BINERO DNI | TICKET"
+            android:textColor="#000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:drawableLeft="@drawable/ic_menu_asignar"
+            android:drawablePadding="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/estilo_caja_texto"
+            android:id="@+id/edt_codigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#2d2d2d"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TICKET" />
+
+                <TextView
+                    android:textColor="#2d2d2d"
+                    android:gravity="center"
+                    android:id="@+id/txt_ticket"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="C########" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="#202d2d2d"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/contadorJabasLeidas"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:paddingTop="0dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:paddingBottom="4dp"
+                android:text="####"
+                android:textColor="#000"
+                android:gravity="center"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

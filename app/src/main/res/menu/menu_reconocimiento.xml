@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:visible="true"
+        android:id="@+id/action_rotar_camara"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_camara_rotar"
+        android:title="Agregar Rostro"
+        app:showAsAction="always" />
+
+    <item
+        android:visible="true"
+        android:id="@+id/action_agregar"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_add"
+        android:title="Agregar Rostro"
+        app:showAsAction="always" />
+
+    <item
+        android:visible="true"
+        android:id="@+id/action_reconocer"
+        android:orderInCategory="100"
+        android:icon="@drawable/face_recognition"
+        android:title="Agregar Rostro"
+        app:showAsAction="always" />
+
+    <item
+        android:visible="true"
+        android:id="@+id/action_lista"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_add"
+        android:title="Ver Lista Reconocimiento"
+        app:showAsAction="never" />
+
+    <item
+        android:visible="true"
+        android:id="@+id/action_actualizar"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_add"
+        android:title="Actualizar Lista de Reconocimiento"
+        app:showAsAction="never" />
+
+    <item
+        android:visible="true"
+        android:id="@+id/action_guardar_rec"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_add"
+        android:title="Guardar Reconocimientos"
+        app:showAsAction="never" />
+
+    <item
+        android:visible="true"
+        android:id="@+id/action_cargar_rec"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_add"
+        android:title="Cargar Reconocimiento"
+        app:showAsAction="never" />
+
+    <item
+        android:visible="true"
+        android:id="@+id/action_limpiar"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_add"
+        android:title="Limpiar Reconocimientos"
+        app:showAsAction="never" />
+
+    <item
+        android:visible="true"
+        android:id="@+id/action_importar_foto"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_add"
+        android:title="Importar Foto"
+        app:showAsAction="never" />
+
+    <item
+        android:visible="true"
+        android:id="@+id/action_algoritmo"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_add"
+        android:title="Algoritmo Reconocimiento"
+        app:showAsAction="never" />
+
+    <item
+        android:visible="true"
+        android:id="@+id/action_transferir_reconocimientos"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_add"
+        android:title="Transferir Reconocimientos"
+        app:showAsAction="never" />
+</menu>

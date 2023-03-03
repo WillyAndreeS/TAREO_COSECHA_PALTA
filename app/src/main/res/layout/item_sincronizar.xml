@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="15dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:text="Estado Sincronización"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:background="#ffffff"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="#000"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:text="CONSUMIDORES"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:visibility="visible"
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/img_estado_sinc_d1"
+                android:layout_weight="1"
+                android:src="@drawable/ic_correcto"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="#f4f4f4"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="#000"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:text="ACTIVIDADES"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:visibility="visible"
+                android:id="@+id/progressBar2"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/img_estado_sinc_d2"
+                android:layout_weight="1"
+                android:src="@drawable/ic_correcto"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="#ffffff"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="#000"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:text="LABORES"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:visibility="visible"
+                android:id="@+id/progressBar3"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/img_estado_sinc_d3"
+                android:layout_weight="1"
+                android:src="@drawable/ic_correcto"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="#f4f4f4"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="#000"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:text="SUBLABORES"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:visibility="visible"
+                android:id="@+id/progressBar4"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/img_estado_sinc_d4"
+                android:layout_weight="1"
+                android:src="@drawable/ic_correcto"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="#ffffff"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="PERSONAL"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <ProgressBar
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:visibility="visible"
+                android:id="@+id/progressBar5"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/img_estado_sinc_d5"
+                android:layout_weight="1"
+                android:src="@drawable/ic_correcto"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="#f4f4f4"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="#000"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:text="USUARIOS"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:visibility="visible"
+                android:id="@+id/progressBar6"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/img_estado_sinc_d6"
+                android:layout_weight="1"
+                android:src="@drawable/ic_correcto"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_aceptar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/estilo_boton_verde_circular"
+                android:elevation="16dp"
+                android:text="ACEPTAR"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+
+            <Button
+                android:id="@+id/btn_cancelar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/estilo_boton_black_circular"
+                android:elevation="16dp"
+                android:text="CANCELAR"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
