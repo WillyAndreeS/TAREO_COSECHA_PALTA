@@ -16,8 +16,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.telephony.SmsManager;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -110,7 +112,7 @@ public class PantallaAsistenciaPersonal extends AppCompatActivity {
         rl_asistencia = (RelativeLayout)findViewById(R.id.rl_asistencia);
         lv_trabajadores_asistencia = (ListView)findViewById(R.id.lv_trabajadores_asistencia);
         txt_cantidad_personas = (TextView)findViewById(R.id.txt_cantidad_personas);
-
+        //edt_dni.requestFocus();
         txt_consumidor.setText(CONSUMIDOR);
         txt_actividad_labor.setText(ACTIVIDAD + " - [" + LABOR + "]");
         fecha_hora.setText(FECHAYHORA);
@@ -136,6 +138,7 @@ public class PantallaAsistenciaPersonal extends AppCompatActivity {
                 if(String.valueOf(charSequence).length() == 8){
                     if(validarNumero(edt_dni.getText().toString())){//Si es numero el dni
                         grabar();
+                        //edt_dni.requestFocus();
                         /*if(esLimpieza()){
                             edt_codigo.requestFocus();
                         }else{
@@ -152,6 +155,7 @@ public class PantallaAsistenciaPersonal extends AppCompatActivity {
             public void afterTextChanged(Editable editable) {
             }
         });
+
 
         ibtnLector.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -398,6 +402,7 @@ public class PantallaAsistenciaPersonal extends AppCompatActivity {
                 Toast.makeText(PantallaAsistenciaPersonal.this, "No se cargó correctamente el CÓDIGO DE TAREO, por favor ingresa nuevamente al TAREO.", Toast.LENGTH_SHORT).show();
             }else{
                 guardarAsistenciaSQLite(IDTAREO, dni);
+                Log.i("MENSAJE pIO", "PIOOOOOOO... no lo hagas");
             }
             //cargar_preferencia_idtareo
             //guardarAsistenciaSQLite(cargar_preferencia_idtareo(), dni);
@@ -434,7 +439,7 @@ public class PantallaAsistenciaPersonal extends AppCompatActivity {
             dialogCambio(DNI);
             cambiarColorBackgroundExito();
             edt_dni.setText("");
-            edt_dni.requestFocus();
+            edt_dni.requestFocus(R.id.edt_dni);
 
             Administrador objAdm = new Administrador();
             objAdm.cargarListaNumerosAdministrador();

@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -304,7 +305,7 @@ public class PantallaLecturaTickets extends AppCompatActivity {
         //if(edt_codigo.getText().toString().length() == 5) {
         if(ticket.length() == 5 && txtConsumidor.getText().toString().length()!=0) {
             guardarLecturaTicketSQLite(ticket, this.consumidor, this.valvula, this.variedad);
-            cambiarColorBackgroundExito();
+           // cambiarColorBackgroundExito();
             txt_ticket.setText("");
         }else{
             /*Variedad objV = new Variedad();
@@ -348,6 +349,7 @@ public class PantallaLecturaTickets extends AppCompatActivity {
             edt_codigo.setText("");
             edt_codigo.requestFocus();
             CONTEO_JABAS++;
+            Log.i("MENSAJE LECTURA","BALDES"+ CONTEO_JABAS);
             contadorJabasLeidas.setText(""+CONTEO_JABAS + " B.");
             new TareoGetConteoPorGrupo().execute(IDTICKET);
             //Double x = (double)Math.round(MiAplicacionTareo.KG_JABA*CONTEO_JABAS * 100d) / 100d;
@@ -355,8 +357,14 @@ public class PantallaLecturaTickets extends AppCompatActivity {
         }
     }
 
+    private void reproducirPitido(){
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.pitido_scanner);
+        mp.start();
+    }
+
     public void cambiarColorBackgroundExito(){
         rl_lectura.setBackgroundColor(Color.parseColor("#6dff4d"));
+        reproducirPitido();
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
