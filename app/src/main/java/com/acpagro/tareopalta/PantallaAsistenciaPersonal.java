@@ -402,7 +402,7 @@ public class PantallaAsistenciaPersonal extends AppCompatActivity {
                 Toast.makeText(PantallaAsistenciaPersonal.this, "No se cargó correctamente el CÓDIGO DE TAREO, por favor ingresa nuevamente al TAREO.", Toast.LENGTH_SHORT).show();
             }else{
                 guardarAsistenciaSQLite(IDTAREO, dni);
-                Log.i("MENSAJE pIO", "PIOOOOOOO... no lo hagas");
+                Log.i("MENSAJE pIO", "PIOOOOOOO... HAZLO");
             }
             //cargar_preferencia_idtareo
             //guardarAsistenciaSQLite(cargar_preferencia_idtareo(), dni);
