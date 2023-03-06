@@ -32,6 +32,8 @@ import com.acpagro.tareopalta.modelo.Variedad;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
+import org.w3c.dom.Text;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -39,12 +41,15 @@ import java.util.Date;
 public class PantallaLecturaTickets extends AppCompatActivity {
 
     private EditText edConsumidor, edt_codigo;
-    private TextView txtConsumidor, txtValvula, txtVariedad, txt_ticket, contadorJabasLeidas, contadorJabasGrupo, idgrupo;
+    private TextView txtConsumidor, txtValvula, txtVariedad, txt_ticket, contadorJabasLeidas, contadorJabasGrupo, idgrupo, jb_sin_transferir;
     private ImageButton ibtn_block, ibtnLector;
     private RelativeLayout rl_lectura;
 
     private String consumidor = "", valvula = "", variedad = "";
+
     private int CONTEO_JABAS=0;
+
+    private boolean CALCULANDO = false;
 
 
     @Override
@@ -67,6 +72,7 @@ public class PantallaLecturaTickets extends AppCompatActivity {
         txtVariedad = (TextView)findViewById(R.id.txtVariedad);
         txt_ticket = (TextView)findViewById(R.id.txt_ticket);
         idgrupo = (TextView)findViewById(R.id.idgrupo);
+        jb_sin_transferir = (TextView)findViewById(R.id.jb_sin_transferir);
         ibtn_block = (ImageButton)findViewById(R.id.ibtn_block);
         rl_lectura = findViewById(R.id.rl_lectura);
         ibtnLector = findViewById(R.id.ibtnLector);
@@ -118,6 +124,8 @@ public class PantallaLecturaTickets extends AppCompatActivity {
                             if (isNumeric(valvula)){
                                 variedad = bin.substring((consumidor.length()+3), (bin.length()));
                                 if (objV.verificarVariedad(variedad)){
+                                    reproducirPitido();
+                                    Log.i("HOLA PITIDO","Timbro");
                                     txtConsumidor.setText("" + consumidor);
                                     txtValvula.setText("" + valvula);
                                     txtVariedad.setText("" + objV.getVariedadPorID(variedad));
@@ -247,6 +255,7 @@ public class PantallaLecturaTickets extends AppCompatActivity {
         vibs.vibrate(duration);
     }
 
+
     public void obtenerListaConteoJabas(){
         new TareaGetCOnteoYListaJabas().execute();
     }
@@ -260,12 +269,14 @@ public class PantallaLecturaTickets extends AppCompatActivity {
         @Override
         protected Integer doInBackground(String... params) {
             TicketCosecha obj = new TicketCosecha();
+            obj.getConteoPantallaLecturaPDASintransferir();
             return obj.getConteoPantallaLecturaPDA();
         }
 
         protected void onPostExecute(Integer result) {
             CONTEO_JABAS = result;
             contadorJabasLeidas.setText(""+result + " B.");
+            jb_sin_transferir.setText(""+TicketCosecha.conteoLecturasSinTransferir);
             Double x = (double)Math.round(MiAplicacionTareo.KG_JABA*result * 100d) / 100d;
             /*contadorJabasLeidas.setText(""+TicketCosecha.conteoPorViaje + " J.");
             Double x = (double)Math.round(MiAplicacionTareo.KG_JABA*TicketCosecha.conteoPorViaje * 100d) / 100d;
@@ -352,6 +363,9 @@ public class PantallaLecturaTickets extends AppCompatActivity {
             Log.i("MENSAJE LECTURA","BALDES"+ CONTEO_JABAS);
             contadorJabasLeidas.setText(""+CONTEO_JABAS + " B.");
             new TareoGetConteoPorGrupo().execute(IDTICKET);
+            if(!CALCULANDO){
+                new TareaGetConteoSinTransferirJabas().execute();
+            }
             //Double x = (double)Math.round(MiAplicacionTareo.KG_JABA*CONTEO_JABAS * 100d) / 100d;
 //            contadorKilos.setText(""+(MiAplicacionTareo.KG_JABA*CONTEO_JABAS) + " KG.");
         }
@@ -372,6 +386,26 @@ public class PantallaLecturaTickets extends AppCompatActivity {
                 rl_lectura.setBackgroundColor(Color.parseColor("#00ffffff"));
             }
         }, 200);
+    }
+
+    private class TareaGetConteoSinTransferirJabas extends AsyncTask<String, Void, Integer> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            CALCULANDO=true;
+        }
+
+        @Override
+        protected Integer doInBackground(String... params) {
+            TicketCosecha obj = new TicketCosecha();
+            return obj.getConteoPantallaLecturaPDASintransferir();
+        }
+
+        protected void onPostExecute(Integer result) {
+            jb_sin_transferir.setText(""+TicketCosecha.conteoLecturasSinTransferir);
+            CALCULANDO=false;
+        }
+
     }
 
     public void cambiarColorBackgroundError(){
@@ -480,6 +514,8 @@ public class PantallaLecturaTickets extends AppCompatActivity {
                         if (isNumeric(valvula)){
                             variedad = bin.substring((consumidor.length()+3), (bin.length()));
                             if (objV.verificarVariedad(variedad)){
+                                reproducirPitido();
+                                Log.i("HOLA PITIDO","Timbro");
                                 txtConsumidor.setText("" + consumidor);
                                 txtValvula.setText("" + valvula);
                                 txtVariedad.setText("" + objV.getVariedadPorID(variedad));

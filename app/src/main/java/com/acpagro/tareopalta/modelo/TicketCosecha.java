@@ -29,6 +29,7 @@ public class TicketCosecha extends SQLite {
     public static ArrayList<TicketCosecha> listaRendimientoCosechadoresSQLite = new ArrayList<TicketCosecha>();
     public static ArrayList<TicketCosecha> listaTicketCosechaConteoSQLite = new ArrayList<TicketCosecha>();
     public static List<String> listaTicketCosechaSQLiteSubir = new ArrayList<>();
+    public static int conteoLecturasSinTransferir = 0;
 
     private String DNI;
     private String NOMBRES;
@@ -108,6 +109,22 @@ public class TicketCosecha extends SQLite {
         SQLiteDatabase bd = this.getReadableDatabase();
         bd.delete("TICKETCOSECHA", "SINCRONIZADO = '2'", null);
         return 1;
+    }
+
+    public int getConteoPantallaLecturaPDASintransferir(){// BD SQLITE
+        int conteo =0;
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = new Date();
+        String fechaHoy = dateFormat.format(date);
+        SQLiteDatabase bd = this.getReadableDatabase();
+        String sql = "SELECT COUNT(*) AS CONTEO FROM TICKETCOSECHA TC WHERE DATE(TC.FECHAREGISTRO, 'localtime') = '"+fechaHoy+"' AND SINCRONIZADO NOT IN('1')";
+        Cursor resultado = bd.rawQuery(sql, null);
+        while (resultado.moveToNext()){
+            conteo = resultado.getInt(0);
+        }
+        bd.close();
+        TicketCosecha.conteoLecturasSinTransferir = conteo;
+        return conteo;
     }
 
     public long agregarTicketCosechaSQLite(String IDTICKET, String IDCONSUMIDOR, String VALVULA, String VARIEDAD, String ID_REGISTRA, Context context){//Lectura con PDA

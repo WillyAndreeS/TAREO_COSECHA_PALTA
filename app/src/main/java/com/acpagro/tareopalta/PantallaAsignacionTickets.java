@@ -10,6 +10,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -160,6 +161,7 @@ public class PantallaAsignacionTickets extends AppCompatActivity {
                             Toast.makeText(PantallaAsignacionTickets.this, "Aún no has asignado un DNI al ticket!", Toast.LENGTH_SHORT).show();
                             cambiarColorBackgroundError();
                         }else{*/
+                            reproducirPitido();
                             txt_ticket.setText(cod);
                             if(txt_dni.getText().toString().length() == 8 && txt_ticket.getText().toString().length() == 5){
                                 Log.i("GRABADO", " OKI2");
@@ -418,6 +420,7 @@ public class PantallaAsignacionTickets extends AppCompatActivity {
             //esperaSegundosYAbrirLectorCamara(3);
             //Toast.makeText(PantallaAsignacionTickets.this, "Ticket ya ha sido asignado anteriormente.", Toast.LENGTH_SHORT).show();
         }else{//Se grabo correctamente!
+            reproducirPitido();
             cambiarColorBackgroundExito();
             /*edt_dni.setText("");
             edt_codigo.setText("");
@@ -514,6 +517,11 @@ public class PantallaAsignacionTickets extends AppCompatActivity {
             }
         };
         request.add(postRequest);
+    }
+
+    private void reproducirPitido(){
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.pitido_scanner);
+        mp.start();
     }
 
     private class TareaEnviarSMS extends AsyncTask<String, Void, Boolean> {

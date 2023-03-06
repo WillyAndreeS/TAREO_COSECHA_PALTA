@@ -37,7 +37,11 @@
         <entry key="..\:/ProjetsAndroid/ACP/TareoPalta/app/src/main/res/layout/activity_pantalla_lectura_tickets_02.xml" value="0.27447916666666666" />
         <entry key="app/src/main/res/layout/activity_pantalla_asignacion_tickets.xml" value="0.240625" />
         <entry key="app/src/main/res/layout/activity_pantalla_asistencia_personal.xml" value="0.240625" />
+        <entry key="app/src/main/res/layout/activity_pantalla_cosecha.xml" value="0.3648148148148148" />
         <entry key="app/src/main/res/layout/activity_pantalla_lectura_tickets_02.xml" value="0.240625" />
+        <entry key="app/src/main/res/layout/activity_pantalla_lista_trabajadores_salida_select.xml" value="0.3880208333333333" />
+        <entry key="app/src/main/res/layout/activity_pantalla_registrar_salida.xml" value="0.3880208333333333" />
+        <entry key="app/src/main/res/layout/activity_pantalla_salida_asistencia.xml" value="0.3880208333333333" />
         <entry key="app/src/main/res/layout/activity_pantalla_tareo_asistencia.xml" value="0.240625" />
         <entry key="app/src/main/res/layout/activity_reconocimiento_asistencia_personal.xml" value="0.240625" />
         <entry key="app/src/main/res/layout/fragment_frag_agregar_usuario.xml" value="0.240625" />

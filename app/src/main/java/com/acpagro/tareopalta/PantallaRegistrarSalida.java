@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
@@ -112,8 +113,9 @@ public class PantallaRegistrarSalida extends AppCompatActivity implements View.O
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(requestCode == SELECCIONAR_TRABAJADOR){
-            if(resultCode == RESULT_OK){
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == SELECCIONAR_TRABAJADOR) {
+            if (resultCode == RESULT_OK) {
                 edt_dni.setText(data.getStringExtra("dni"));
             }
         }
@@ -228,6 +230,11 @@ public class PantallaRegistrarSalida extends AppCompatActivity implements View.O
         }
     }
 
+    private void reproducirPitido(){
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.pitido_scanner);
+        mp.start();
+    }
+
     private void guardarSalidaSQLite(String DNI, String HORA){
         SalidaPersonal objA = new SalidaPersonal();
         Long r = objA.agregarSalida(DNI, HORA);
@@ -242,6 +249,7 @@ public class PantallaRegistrarSalida extends AppCompatActivity implements View.O
             //esperaSegundosYAbrirLectorCamara(3);
             //Toast.makeText(PantallaAsistenciaPersonal.this, "Trabajador ya ha sido asignado a TAREO.", Toast.LENGTH_SHORT).show();
         }else{//Se grabo correctamente!
+            reproducirPitido();
             cambiarColorBackgroundExito();
             edt_dni.setText("");
             txt_dni_nombre.setText("");

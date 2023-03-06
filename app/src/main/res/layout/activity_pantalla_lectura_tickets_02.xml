@@ -305,10 +305,56 @@
                     android:text="0 B."/>
 
             </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@color/colorRojoIntenso"
+                android:paddingTop="4dp"
+                android:paddingLeft="6dp"
+                android:layout_marginTop="20dp"
+                android:paddingRight="6dp"
+                android:paddingBottom="4dp"
+                android:layout_weight="0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:layout_marginRight="5dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text="SIN TRANSFERIR : "
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/jb_sin_transferir"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:text="####"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text=" B."
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
 
         </LinearLayout>
 
+
     </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/parte_baja"
@@ -360,5 +406,6 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
     </LinearLayout>
+
 
 </RelativeLayout>

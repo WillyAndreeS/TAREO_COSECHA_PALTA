@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
@@ -134,6 +135,7 @@ public class PantallaSalidaAsistencia extends AppCompatActivity {
                 cambiarColorBackgroundError();
             }else{
                 cargarLista(PantallaSalidaAsistencia.this);
+                reproducirPitido();
                 cambiarColorBackgroundExito();
             }
         }else{
@@ -187,6 +189,11 @@ public class PantallaSalidaAsistencia extends AppCompatActivity {
                 rl_salida_asistencia.setBackgroundColor(Color.parseColor("#00ffffff"));
             }
         }, 500);
+    }
+
+    private void reproducirPitido(){
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.pitido_scanner);
+        mp.start();
     }
 
     public void cambiarColorBackgroundExito(){

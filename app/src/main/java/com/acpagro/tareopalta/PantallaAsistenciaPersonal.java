@@ -437,6 +437,7 @@ public class PantallaAsistenciaPersonal extends AppCompatActivity {
             }
         }else if(r == 400){//CAMBIO DE MODULO
             dialogCambio(DNI);
+            reproducirPitido();
             cambiarColorBackgroundExito();
             edt_dni.setText("");
             edt_dni.requestFocus(R.id.edt_dni);
@@ -459,6 +460,7 @@ public class PantallaAsistenciaPersonal extends AppCompatActivity {
             getConsultaPersonalNoEncontrado(edt_dni.getText().toString().trim());
 
         }else{//Se grabo correctamente!
+            reproducirPitido();
             cambiarColorBackgroundExito();
             edt_dni.setText("");
             edt_dni.requestFocus();
