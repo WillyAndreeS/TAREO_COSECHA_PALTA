@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -28,6 +29,7 @@ import com.acpagro.tareopalta.adapters.AdapterListaBinCabecera;
 import com.acpagro.tareopalta.modelo.BinCabecera;
 import com.acpagro.tareopalta.modelo.MiAplicacionTareo;
 import com.acpagro.tareopalta.modelo.ServiceTarea;
+import com.acpagro.tareopalta.modelo.TicketCosecha;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -37,11 +39,13 @@ public class PantallaListaCabeceraBin extends AppCompatActivity {
 
     public static AlertDialog alertDialog;
     private Button btn_nuevo_viaje;
-    public static TextView item_total_cabeceras;
+    public static TextView item_total_cabeceras, jb_sin_transferir;
     public static AdapterListaBinCabecera adapter;
     public static ListView lv_cabecera;
     public static String FECHAHOY;
 
+    private boolean CALCULANDO = false;
+    private int CONTEO_JABAS=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +62,7 @@ public class PantallaListaCabeceraBin extends AppCompatActivity {
         btn_nuevo_viaje = findViewById(R.id.btn_nuevo_viaje);
         item_total_cabeceras = findViewById(R.id.item_total_cabeceras);
         lv_cabecera = findViewById(R.id.lv_cabecera);
+        jb_sin_transferir = (TextView)findViewById(R.id.jb_sin_transferir);
         adapter = new AdapterListaBinCabecera(this);
         lv_cabecera.setAdapter(adapter);
 
@@ -70,6 +75,26 @@ public class PantallaListaCabeceraBin extends AppCompatActivity {
         });
 
         //cargarCabeceras();
+    }
+
+    private class TareaGetConteoSinTransferirJabas extends AsyncTask<String, Void, Integer> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            CALCULANDO=true;
+        }
+
+        @Override
+        protected Integer doInBackground(String... params) {
+            TicketCosecha obj = new TicketCosecha();
+            return obj.getConteoPantallaLecturaPDASintransferir();
+        }
+
+        protected void onPostExecute(Integer result) {
+            jb_sin_transferir.setText(""+TicketCosecha.conteoLecturasSinTransferir);
+            CALCULANDO=false;
+        }
+
     }
 
     @Override
@@ -95,8 +120,11 @@ public class PantallaListaCabeceraBin extends AppCompatActivity {
     public static void cargarCabeceras(){
         BinCabecera objBC = new BinCabecera();
         objBC.cargarListaCabecerasHoy();
+        objBC.getConteoPantallaLecturaPDASintransferir();
         adapter.notifyDataSetChanged();
         item_total_cabeceras.setText(""+BinCabecera.suma_viajes);
+        jb_sin_transferir.setText(""+TicketCosecha.conteoLecturasSinTransferir);
+
     }
 
     @Override
@@ -173,6 +201,7 @@ public class PantallaListaCabeceraBin extends AppCompatActivity {
                             bc.cargarListaCabecerasHoy();
                             adapter.notifyDataSetChanged();
 
+
                             Bundle parametros = new Bundle();
                             Intent pR = new Intent(context, PantallaDetalleBinLectura.class);
                             parametros.putString("p_idcabecera", BinCabecera.IDCABECERA_NEW);
@@ -195,6 +224,7 @@ public class PantallaListaCabeceraBin extends AppCompatActivity {
                 }
             }
         });
+
 
         btn_cancelar.setOnClickListener(new View.OnClickListener() {
             @Override

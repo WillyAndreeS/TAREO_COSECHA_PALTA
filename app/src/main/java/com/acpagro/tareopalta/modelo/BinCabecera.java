@@ -221,6 +221,22 @@ public class BinCabecera extends SQLite {
         return resultado;
     }
 
+    public int getConteoPantallaLecturaPDASintransferir(){// BD SQLITE
+        int conteo =0;
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = new Date();
+        String fechaHoy = dateFormat.format(date);
+        SQLiteDatabase bd = this.getReadableDatabase();
+        String sql = "SELECT COUNT(*) AS CONTEO FROM VIAJE_BINES_CABECERA TC WHERE DATE(TC.FECHAREGISTRO, 'localtime') = '"+fechaHoy+"' AND SINCRONIZADO NOT IN('1')";
+        Cursor resultado = bd.rawQuery(sql, null);
+        while (resultado.moveToNext()){
+            conteo = resultado.getInt(0);
+        }
+        bd.close();
+        TicketCosecha.conteoLecturasSinTransferir = conteo;
+        return conteo;
+    }
+
     public void cargarListaCabecerasHoy(){// BD SQLITE
         suma_viajes = 0;
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");

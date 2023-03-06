@@ -12,6 +12,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -199,6 +200,7 @@ public class PantallaDetalleBinLectura extends AppCompatActivity {
         if(r == -1){
             cambiarColorBackgroundError();
         }else{
+            reproducirPitido();
             cambiarColorBackgroundExito();
 
             cargarDetalle();
@@ -305,6 +307,11 @@ public class PantallaDetalleBinLectura extends AppCompatActivity {
         builder.setTitle("IMPRIMIR ETIQUETA");
         builder.setView(v);
         return  builder.create();
+    }
+
+    private void reproducirPitido(){
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.pitido_scanner);
+        mp.start();
     }
 
     private class TareaImprimir extends AsyncTask<String, Void, Boolean> {
